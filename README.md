@@ -1,4 +1,4 @@
-# top-down parser for customer program language
+# Top-down parser for customer program language
 
 a simple parser for a simple program language "customer language"
 
@@ -46,7 +46,7 @@ end
 19. addop -> + | -
 20. mulop -> * | /
 
-- example
+## example
 
 ```
 {sample program in TINY language- computes factorial}
@@ -72,3 +72,46 @@ do
 A:=A*2
 while A<=D
 ```
+
+## Result
+
+------
+```
+{A sample TINY program}
+read x;
+if 0<x then
+fact:=1;
+repeat
+	fact:=fact*x;
+	x:=x-1
+until x=0;
+write fact
+end
+```
+![result1](assets/result1.png)
+
+--------
+
+```
+{This is Comment}
+read x;{This is Comment}
+read y;
+if x<y then
+x:=10;
+repeat
+	x:=x+1;
+	y:=y+x
+until x=10
+end;
+
+repeat
+	x:=x+1;
+	if x<y then
+	y:=y-1
+	end
+until y=x
+```
+
+![result2](assets/result2.png)
+
+-------
